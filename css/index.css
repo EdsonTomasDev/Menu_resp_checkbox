@@ -18,6 +18,7 @@
     background-color: #222;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px;
     border: 1px solid white;
    
@@ -38,8 +39,12 @@
 
 .logo h1:hover, .menu ul li a:hover {
     opacity: 0.8;
+    cursor: pointer;
 }
 
+.menu ul li a:hover {
+    border-bottom: 1px solid white;
+}
 
 /*Estilizando as listas */
 .menu ul {
@@ -53,3 +58,23 @@
 .menu ul li a {
     text-decoration: none;
 }
+
+/* Esilizando o icone de barras */
+
+.fa-bars {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+.fa-bars:hover {
+    opacity: 0.8;
+}
+
+/* Escondendo o checkbox e o label */
+#bt_menu, #icone {
+    display: none;
+    }
+
+label[for=”bt_menu”]{
+    display: none;
+    }
