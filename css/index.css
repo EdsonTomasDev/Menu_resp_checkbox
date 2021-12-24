@@ -116,7 +116,8 @@
         width: 100vw;
         text-align: center;
         margin-left: -100%;
-        transition: all 0.8s;
+        height: 0;
+        transition: all 0.4s;
     
     }
     .menu ul li {
@@ -129,6 +130,7 @@
 
     #bt_menu:checked ~ .menu ul {
         margin-left: 0;
+        height: 120px;
       
        
        /* margin-left: 0; */
