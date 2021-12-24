@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* background: rgb(218, 31, 31); */
     }
 
 /*Estilizando a nav da classe menu */
@@ -20,14 +21,16 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
+    position: relative;
    
 }
 .menu {
+    /* width: 100%; */
+    /* background-color: #222; */
+    font-family: Arial;
+    /* border: 1px solid green; */
     
-    
-    
-  
     }
 .logo h1 {
     font-size: 25px;
@@ -50,13 +53,16 @@
 .menu ul {
     list-style: none;
     display: flex;
+    
     }
 .menu ul li {
     padding: 0 10px;
+    /* overflow: hidden; */
 }
 
 .menu ul li a {
     text-decoration: none;
+   
 }
 
 /* Esilizando o icone de barras */
@@ -69,12 +75,67 @@
 .fa-bars:hover {
     opacity: 0.8;
 }
-
+#icone {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
 /* Escondendo o checkbox e o label */
 #bt_menu, #icone {
     display: none;
     }
 
-label[for=”bt_menu”]{
-    display: none;
+.ola {
+    border: 1px solid red;
+    margin-top: 100px;
+    
+}
+
+/*Deixando o Menu Responsivo */
+@media(max-width: 700px) {
+    /* Exibe o label com o icone das barras */
+  
+    #icone {
+    display: block;
     }
+
+    .menu_header {
+        flex-direction: column;
+        height: 45px;
+    }
+
+    .logo {
+        /* border: 1px solid red; */
+    }
+
+    
+
+    .menu ul {
+        flex-direction: column;
+        background-color: #222;
+        width: 100vw;
+        text-align: center;
+        margin-left: -100%;
+        transition: all 0.8s;
+    
+    }
+    .menu ul li {
+        margin: 5px 0;
+    }
+    
+   
+
+  
+
+    #bt_menu:checked ~ .menu ul {
+        margin-left: 0;
+      
+       
+       /* margin-left: 0; */
+       
+        }
+
+}
+
+
+
